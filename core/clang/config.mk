@@ -48,6 +48,12 @@ CLANG_CONFIG_EXTRA_CFLAGS += \
   -Wno-unused-command-line-argument
 
 CLANG_CONFIG_UNKNOWN_CFLAGS := \
+  -mvectorize-with-neon-double \
+  -mvectorize-with-neon-quad \
+  -ftree-parallelize-loops=2 \
+  -ftree-parallelize-loops=4 \
+  -ftree-parallelize-loops=8 \
+  -ftree-parallelize-loops=16 \
   -funswitch-loops \
   -fno-tree-sra \
   -finline-limit=64 \
